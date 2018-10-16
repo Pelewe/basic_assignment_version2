@@ -1,11 +1,11 @@
 #files to be ignored
 
-target/
+/target/
 *.class
 
 ### STS ###
 .apt_generated
-.classpath
+*.classpath
 .factorypath
 .project
 .settings

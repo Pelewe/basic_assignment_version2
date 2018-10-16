@@ -13,10 +13,6 @@ import com.assignment.writefile.WriteTofile;
 
 
 
-
-
-
-
 public class ReadFile {
 	
 	public File readFile(String filename,int startid) {

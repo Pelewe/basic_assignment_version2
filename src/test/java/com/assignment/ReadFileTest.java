@@ -1,34 +1,55 @@
-/*package com.assignment;
+package com.assignment;
+import com.assignment.readfile.ReadFile;
+import junit.framework.TestCase;
 
-import java.io.File;
+//import static org.junit.Assert.assertEquals;
+//import static org.junit.Assert.assertTrue;
+
 import java.io.IOException;
-import static org.junit.Assert.*;
-
 import org.junit.Rule;
 import org.junit.Test;
-import org.junit.rules.ExternalResource;
+import org.junit.rules.ExpectedException;
+import org.junit.rules.TemporaryFolder;
 
-import com.assignment.readfile.ReadFile;
 
-public class ReadFileTest {
-	private ReadFile readfile=new ReadFile();
+public class ReadFileTest  extends TestCase {
 	
-	@Rule 
-	public TemporaryFolder temporaryFolder=new TemporaryFolder();
+		@Rule 
+		public TemporaryFolder temporaryFolder=new TemporaryFolder();
 	
-	@Rule
-	public ExpectedException thrown = ExpectedException.none();
+		@Rule
+		public ExpectedException thrown = ExpectedException.none();
 	
-	@Test
-	public void throwsErrorWhenTargetFileDoesnotExist() throws IOException{
+		@Test
+		public void throwsErrorWhenTargetFileDoesnotExist() throws IOException{
 		
-		File output=new File("C:\\Users\\Reverside\\Documents\\Assignments\\assignment_tools\\sample_4.txt");
-		thrown.expect(IOException.class);
-		thrown.expectMessage("File does not exist");
+			
+			thrown.expect(IOException.class);
+			thrown.expectMessage("File does not exist");
+			String output="C:\\Users\\Reverside\\Documents\\Assignments\\assignment_tools\\sample_4.txt";
 		
-		readfile.readFile(output, 500);
-	}
-	
+			//File returnedFile=
+			ReadFile readfile=new ReadFile();
+			readfile.readFile(output, 500);		
+		}
+		
+		@Test
+		public void returnNewFilename() {
+			String output="C:\\Users\\Reverside\\Documents\\Assignments\\assignment_tools\\sample_1.txt";
+			ReadFile readfile=new ReadFile();
+				
+			String expected="sample_1.sql";
+			String results=readfile.readFile(output, 500).toString();
+			
 
+			assertEquals(expected, results);
+			
+			
+		}
+		
 }
-*/
+
+
+
+
+
