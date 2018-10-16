@@ -70,7 +70,7 @@ public class ExtractToList {
 			 temp=line.substring(1,index-1);
 			 contents.add(temp);
 			 line=line.substring(index+1,line.length());
-			System.out.println(temp);
+			
 		 }
 		 contents.add(line.substring(1,line.length()-1));
 		 
