@@ -8,8 +8,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.assignment.extraction.Extract;
-import com.assignment.writefile.Writefile;
+import com.assignment.extraction.ExtractToList;
+import com.assignment.writefile.WriteTofile;
+
+
+
+
 
 
 
@@ -18,10 +22,10 @@ public class ReadFile {
 	public File readFile(String filename,int startid) {
 		
 		String line=null;
-		List<String> contents=new ArrayList<>();
+		List<String> contents=new ArrayList<String>();
 		int counter=startid;
-	    Extract extract= new Extract();
-	    Writefile writer=new Writefile();
+	    ExtractToList extract= new ExtractToList();
+	    WriteTofile writer=new WriteTofile();
 	    
 	    
 	     try {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="com.assignment.AppTest" time="0.002" errors="0" skipped="0">
+<testsuite tests="1" failures="0" name="com.assignment.AppTest" time="0.009" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="10.0.2+13"/>
@@ -29,7 +29,7 @@
     <property name="os.name" value="Windows 10"/>
     <property name="classworlds.conf" value="C:\Users\Reverside\Downloads\apache-maven-3.5.4\bin\..\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk-10.0.2\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk-10.0.2\bin;C:\Users\Reverside\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\nodejs\;C:\Program Files\Java\jdk-10.0.2\bin;C:\Users\Reverside\AppData\Roaming\npm;C:\Users\Reverside\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Reverside\Downloads\apache-maven-3.5.4\bin;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-10.0.2\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk-10.0.2\bin;C:\Windows\system32\config\systemprofile\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\nodejs\;C:\Program Files\Java\jdk-10.0.2\bin;C:\Users\Reverside\AppData\Roaming\npm;C:\Users\Reverside\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Reverside\Downloads\apache-maven-3.5.4\bin;."/>
     <property name="maven.conf" value="C:\Users\Reverside\Downloads\apache-maven-3.5.4\bin\../conf"/>
     <property name="jdk.debug" value="release"/>
     <property name="java.class.version" value="54.0"/>
@@ -46,7 +46,7 @@
     <property name="java.class.path" value="C:\Users\Reverside\Downloads\apache-maven-3.5.4\bin\..\boot\plexus-classworlds-2.5.2.jar"/>
     <property name="java.vm.specification.version" value="10"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher package"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean package"/>
     <property name="java.home" value="C:\Program Files\Java\jdk-10.0.2"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -66,5 +66,5 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.assignment.AppTest" name="testApp" time="0.002"/>
+  <testcase classname="com.assignment.AppTest" name="testApp" time="0.009"/>
 </testsuite>

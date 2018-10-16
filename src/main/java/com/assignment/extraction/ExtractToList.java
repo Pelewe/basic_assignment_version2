@@ -1,13 +1,9 @@
 package com.assignment.extraction;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Extract {
+public class ExtractToList {
 	
 
 	public List<String> ExtractFromLine(String filename,String line,int counter) {
@@ -28,7 +24,7 @@ public class Extract {
 	}
 	
 	public List<String> extractSample1(String line,int counter) {
-		List<String> contents=new ArrayList<>();
+		List<String> contents=new ArrayList<String>();
 		String find="",temp;
 		int index=0;
 		
@@ -64,7 +60,7 @@ public class Extract {
 	
 	
 	public List<String> extractSample2(String line,int counter) {
-		List<String> contents=new ArrayList<>();
+		List<String> contents=new ArrayList<String>();
 		String  temp="";
 		int index=0;
 		 

@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
-public class Writefile {
+public class WriteTofile {
 	
 	public void writeToFile(List<String> contents, FileWriter out) throws Exception{
 		String id,fname,lname,gender,DOB;
