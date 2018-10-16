@@ -19,7 +19,6 @@ public class ReadFile {
 		
 		String line=null;
 		List<String> contents=new ArrayList<>();
-		List<String> temp=new ArrayList<>();
 		int counter=startid;
 	    Extract extract= new Extract();
 	    Writefile writer=new Writefile();
@@ -36,17 +35,20 @@ public class ReadFile {
 	    		 contents.clear();
 	    		 
 	    		 if(filename.contains("3")) {
-	    			 while(line!="#") {
-	    				 contents=extract.ExtractFromLine(filename,line, counter);
-	    				 
+	    			 if(line.equals("#")){
+	    				 line=bufferReader.readLine();
 	    			 }
+	    			 contents.add(String.valueOf(counter));
 	    			 
+	    			 while(!line.equals("#")) {
+	    				 contents.add(extract.extractSample3(line, counter));
+	    				 line=bufferReader.readLine();
+	    			 }
 	    		 }
 	    		 else {
-	    		 contents=extract.ExtractFromLine(filename,line, counter);
+	    			 contents=extract.ExtractFromLine(filename,line, counter);
 	    		 }
 	    		 
-	    		 //contents=extract.ExtractFromLine(filename,line, counter);
 	    		 
 	    		 try {	
 	    			 writer.writeToFile(contents, out);

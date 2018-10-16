@@ -19,7 +19,8 @@ public class Extract {
 			return extractSample2(line, counter);
 		}
 		else if (filename.contains("3")){
-			return extractSample3(filename,line, counter);
+			return null;
+			//return extractSample3(line, counter);
 		}
 		else {
 			return null;
@@ -86,7 +87,6 @@ public class Extract {
 	
 		index=line.indexOf(":");
 		contents=line.substring(index+2,line.length());
-		
 		 
 		 return contents;
 	}
