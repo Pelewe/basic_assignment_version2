@@ -5,9 +5,14 @@ import java.util.List;
 
 public class ExtractToList {
 	
+	public boolean callOneCalled = false;
+	public boolean callTwoCalled = false;
+	public boolean callThreeCalled = false;
+	  
 
+	@SuppressWarnings("null")
 	public List<String> ExtractFromLine(String filename,String line,int counter) {
-		
+		List<String> list=null;
 		if(filename.contains("1")) {
 			return extractSample1(line, counter);
 		}
@@ -15,8 +20,9 @@ public class ExtractToList {
 			return extractSample2(line, counter);
 		}
 		else if (filename.contains("3")){
-			return null;
-			//return extractSample3(line, counter);
+			
+			list.add(extractSample3(line, counter));
+			return list;
 		}
 		else {
 			return null;
@@ -24,6 +30,8 @@ public class ExtractToList {
 	}
 	
 	public List<String> extractSample1(String line,int counter) {
+		this.callOneCalled=true;
+		
 		List<String> contents=new ArrayList<String>();
 		String find="",temp;
 		int index=0;
@@ -60,6 +68,8 @@ public class ExtractToList {
 	
 	
 	public List<String> extractSample2(String line,int counter) {
+		this.callTwoCalled=true;
+		
 		List<String> contents=new ArrayList<String>();
 		String  temp="";
 		int index=0;
@@ -78,6 +88,8 @@ public class ExtractToList {
 	}
 	
 	public String extractSample3(String line,int counter) {
+		this.callThreeCalled=true;
+		
 		String contents="";
 		int index=0;
 	

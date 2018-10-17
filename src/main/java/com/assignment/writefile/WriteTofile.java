@@ -49,23 +49,39 @@ public class WriteTofile {
 		
 	}
 	
-	static List<String> formatStrings=Arrays.asList("yyyy-MM-dd","dd MMM yyyy","dd/MM/YYYY");
+static List<String> formatStrings=Arrays.asList("yyyy-MM-dd","dd MMM yyyy","dd/MM/YYYY");
+
+
+public Date dateFormat(String dateString) throws Exception{
+	Exception exp=null;
+	Date date=null;
 	
-	public Date dateFormat(String dateString) {
-		
-		for(String formatString:formatStrings) {
-			try
-			{
-				return new SimpleDateFormat(formatString).parse(dateString);
-			}
-			catch(ParseException e) {
-				
-			}
-			
+	for(String formatString:formatStrings) {
+		try
+		{
+			date=new SimpleDateFormat(formatString).parse(dateString);
 		}
-		return null;
+		catch(ParseException e) {
+			exp=e;
+		}
 		
 	}
+	
+	if(date!=null) {
+		return date;
+	}
+	else throw exp;
+	
 }
+/*
+	public Date dateFormat(String dateString) throws ParseException {
+		for(String formatString:formatStrings) {
+				return new SimpleDateFormat(formatString).parse(dateString);
+		}
+		return null;
+	}
+	*/
+}
+
 
 

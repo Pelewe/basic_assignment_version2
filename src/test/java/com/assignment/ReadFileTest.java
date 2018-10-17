@@ -18,6 +18,8 @@ import com.assignment.readfile.*;
 
 public class ReadFileTest {
 	
+		private ReadFile readfile=new ReadFile();
+		
 		@Rule 
 		public TemporaryFolder temporaryFolder=new TemporaryFolder();
 	
@@ -26,24 +28,24 @@ public class ReadFileTest {
 		
 
 		@Test
-		public void throwsErrorWhenTargetFileDoesnotExist() throws Throwable{
-		
+		public void throwsErrorWhenTargetFileDoesnotExist() throws IOException{
 			
-			thrown.expect(Throwable.class);
-			thrown.expectMessage("File does not exist");
-			String output="C:\\Users\\Reverside\\Documents\\Assignments\\assignment_tools\\sample_4.txt";
-		
-			//File returnedFile=
-			ReadFile readfile=new ReadFile();
-			readfile.readFile(output, 500);		
+			thrown.expect(IOException.class);
+			String output="sample_5.txt";
+			
+		    FileReader reader = new FileReader(output);
+		    reader.read();
+		    reader.close();
+			
+			//readfile.readFile(output, 500);		
 		}
 		
+		
 		@Test
-		public void returnNewFilename() {
-			String output="C:\\Users\\Reverside\\Documents\\Assignments\\assignment_tools\\sample_1.txt";
-			ReadFile readfile=new ReadFile();
+		public void returnNewFilenameWithSQLextension() {
+			String output="sample_1.txt";
 				
-			String expected="C:\\Users\\Reverside\\Documents\\Assignments\\assignment_tools\\sample_1.sql";
+			String expected="sample_1.sql";
 			String results=readfile.readFile(output, 500).toString();
 			
 
@@ -53,7 +55,7 @@ public class ReadFileTest {
 		@Test
 		public void whenReadWithBufferedReader_thenCorrect() throws IOException {
 		     String expected_value = "Manmay Mohanty, M, 07/03/1983, Y";
-		     String file ="C:\\Users\\Reverside\\Documents\\Assignments\\assignment_tools\\sample_1.txt";
+		     String file ="sample_1.txt";
 		      
 		     BufferedReader reader = new BufferedReader(new FileReader(file));
 		     String currentLine = reader.readLine();
@@ -61,6 +63,7 @@ public class ReadFileTest {
 		 
 		    assertEquals(expected_value, currentLine);
 		}
+		
 }
 
 
