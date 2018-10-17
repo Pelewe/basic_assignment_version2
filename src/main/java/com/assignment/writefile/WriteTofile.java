@@ -54,33 +54,21 @@ static List<String> formatStrings=Arrays.asList("yyyy-MM-dd","dd MMM yyyy","dd/M
 
 public Date dateFormat(String dateString) throws Exception{
 	Exception exp=null;
-	Date date=null;
 	
 	for(String formatString:formatStrings) {
 		try
 		{
-			date=new SimpleDateFormat(formatString).parse(dateString);
+			return new SimpleDateFormat(formatString).parse(dateString);
 		}
 		catch(ParseException e) {
 			exp=e;
 		}
 		
 	}
-	
-	if(date!=null) {
-		return date;
-	}
-	else throw exp;
-	
+		 throw exp;
 }
-/*
-	public Date dateFormat(String dateString) throws ParseException {
-		for(String formatString:formatStrings) {
-				return new SimpleDateFormat(formatString).parse(dateString);
-		}
-		return null;
-	}
-	*/
+
+
 }
 
 
