@@ -18,6 +18,7 @@ public class ReadFile {
 	public File readFile(String filename,int startid) {
 		
 		String line=null;
+		String newFilename="";
 		List<String> contents=new ArrayList<String>();
 		int counter=startid;
 	    ExtractToList extract= new ExtractToList();
@@ -26,15 +27,15 @@ public class ReadFile {
 	    
 	     try {
 	    	 BufferedReader bufferReader=new BufferedReader(new FileReader(filename));
-	    	 filename=filename.substring(0,filename.length()-4);
-	    	 filename=filename+".sql";
-	    	 FileWriter out = new FileWriter(filename);
+	    	 newFilename=filename.substring(0,filename.length()-4);
+	    	 newFilename=newFilename+".sql";
+	    	 FileWriter out = new FileWriter(newFilename);
 	    	 
 	    	 
 	    	 while((line=bufferReader.readLine())!=null) {
 	    		 contents.clear();
 	    		 
-	    		 if(filename.contains("3")) {
+	    		 if(filename.endsWith("pretoria.txt")) {
 	    			 if(line.equals("#")){
 	    				 line=bufferReader.readLine();
 	    			 }
@@ -68,7 +69,7 @@ public class ReadFile {
 		 		System.out.println("File does not exist");
 		 	} 
 	     
-	     File returnedFile=new File(filename);
+	     File returnedFile=new File(newFilename);
 			
 		return returnedFile;
 		     

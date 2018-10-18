@@ -9,7 +9,7 @@ public class App
 	public static void main(String[] arg)  {
 		//READ INPUTS
 		
-		String Filename=arg[0];
+		String Filename=arg[0].toLowerCase();
 		int firstId=Integer.parseInt(arg[1]);
 		
 		

@@ -23,7 +23,7 @@ public class ExtractToListTest {
 	@Test
 	public void whenExtractFromLine_thenCorrect() throws IOException {
 				 List<String> expected_value =Arrays.asList("200","Manmay","Mohanty", "07/03/1983", "Y","M");
-			     String file ="sample_1.txt";
+			     String file ="sample_capetown.txt";
 			     
 			     BufferedReader reader = new BufferedReader(new FileReader(file));
 			     String currentLine = reader.readLine();
@@ -43,7 +43,7 @@ public class ExtractToListTest {
 	@Test
 	public void whenSample2ExtractFromLine_thenCorrect() throws IOException {
 		        List<String> expected_value =Arrays.asList("200","MANMAY","MOHANTY", "1983-03-07","Married", "Male");
-		        String file ="sample_2.txt";
+		        String file ="sample_johannesburg.txt";
 	     
 	     
 		        BufferedReader reader = new BufferedReader(new FileReader(file));
@@ -62,13 +62,13 @@ public class ExtractToListTest {
 
 	@Test
 	public void testDifferentSampleFilePassed() throws Exception{
-	    	String file ="sample_2.txt";
+	    	String file;
 	     
 	    	BufferedReader reader;
 	    	String currentLine;
 	    
-	    //when sample 2 is passed as a file format
-	    	file ="sample_1.txt";
+	    //when sample 1 is passed as a file format
+	    	file ="sample_capetown.txt";
 	    	reader= new BufferedReader(new FileReader(file));
 	    	currentLine= reader.readLine();
 	    
@@ -82,7 +82,7 @@ public class ExtractToListTest {
 	    
 	    //when sample 2 is passed as a file format
 	    	ExtractToList extract1=new ExtractToList();
-	    	file ="sample_2.txt";
+	    	file ="sample_johannesburg.txt";
 	    	reader= new BufferedReader(new FileReader(file));
 	    	currentLine= reader.readLine();
 	    
@@ -95,7 +95,7 @@ public class ExtractToListTest {
 	    
 	    //when sample 3 is passed as a file format
 	    	ExtractToList extract2=new ExtractToList();
-	    	file ="sample_3.txt";
+	    	file ="sample_pretoria.txt";
 	    	reader= new BufferedReader(new FileReader(file));
 	    	currentLine=reader.readLine();
 	    	currentLine= reader.readLine();
@@ -122,12 +122,13 @@ public class ExtractToListTest {
 	    	assertFalse(extract3.callThreeCalled);
 	   
 	    	reader.close();
+	    	
 	}
 	
 	@Test(expected=NullPointerException.class)
 	public void Sample3extractShouldThrowsNullpointerException() throws Exception{
 		
-			String file ="sample_3.txt";
+			String file ="sample_pretoria.txt";
 			
 			BufferedReader  reader= new BufferedReader(new FileReader(file));
 			String currentLine= reader.readLine();

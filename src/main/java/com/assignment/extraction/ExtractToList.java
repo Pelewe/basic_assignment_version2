@@ -13,18 +13,20 @@ public class ExtractToList {
 	@SuppressWarnings("null")
 	public List<String> ExtractFromLine(String filename,String line,int counter) {
 		List<String> list=null;
-		if(filename.contains("1")) {
+		if(filename.endsWith("capetown.txt")) {
 			return extractSample1(line, counter);
 		}
-		else if(filename.contains("2")){
+		else if(filename.endsWith("johannesburg.txt")){
 			return extractSample2(line, counter);
 		}
-		else if (filename.contains("3")){
+		else if (filename.endsWith("pretoria.txt")){
 			
 			list.add(extractSample3(line, counter));
 			return list;
 		}
 		else {
+			System.out.println("Error filename "+filename+" File name is not as expected or branch name not found /unknown");
+	
 			return null;
 		}
 	}

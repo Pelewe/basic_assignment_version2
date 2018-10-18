@@ -34,7 +34,9 @@ using command prompt :
 	
 	To build the project type -> mvn clean package .
 	
-	To run the project type -> java -jar Application.jar filename_samplenumber.txt startid .
+	To run the project type -> java -jar application.jar filename_format.txt startId .
+	
+	input file should be in the format <any_text>_<branch_name>.txt Example : sample_capetown.txt, test_johannesburg.txt, abcd_pretoria.txt
 	
 	eg. java -jar Application.jar sample_1.txt 500
 	

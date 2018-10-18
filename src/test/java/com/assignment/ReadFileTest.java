@@ -43,9 +43,9 @@ public class ReadFileTest {
 		
 		@Test
 		public void returnNewFilenameWithSQLextension() {
-			String output="sample_1.txt";
+			String output="sample_capetown.txt";
 				
-			String expected="sample_1.sql";
+			String expected="sample_capetown.sql";
 			String results=readfile.readFile(output, 500).toString();
 			
 
@@ -55,7 +55,7 @@ public class ReadFileTest {
 		@Test
 		public void whenReadWithBufferedReader_thenCorrect() throws IOException {
 		     String expected_value = "Manmay Mohanty, M, 07/03/1983, Y";
-		     String file ="sample_1.txt";
+		     String file ="sample_capetown.txt";
 		      
 		     BufferedReader reader = new BufferedReader(new FileReader(file));
 		     String currentLine = reader.readLine();
